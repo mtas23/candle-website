@@ -1,7 +1,7 @@
 <?php
 require_once 'baglan.php';
 
-// Formdan veriler gelmiş mi?
+// Formdan veriler gelmis mi kontrol icin
 if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
     
     $isim = $_POST['name'];
