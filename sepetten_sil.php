@@ -6,14 +6,14 @@ require_once 'baglan.php';
 if(isset($_GET['id'])) {
     
     $silinecek_id = $_GET['id'];
-    $yaka_karti = session_id(); // Başkasının sepetindeki mumu silmemesi için yaka kartını kontrol ediyoruz
+    $yaka_karti = session_id(); // Başkasının sepetindeki mumu silmemesi kontrol ediyoruz
 
-    // Arka odadaki defterden o satırı sil (DELETE işlemi)
+   
     $sorgu = $db->prepare("DELETE FROM sepet WHERE id = ? AND session_id = ?");
     $sorgu->execute([$silinecek_id, $yaka_karti]);
 }
 
-// Silme işlemi biter bitmez (göz kırpma hızında) müşteriyi tekrar sepetim sayfasına geri gönder
+// Silme işlemi biter bitmez müşteriyi tekrar sepetim sayfasına geri gönder
 header("Location: sepetim.php");
 exit();
 ?>
