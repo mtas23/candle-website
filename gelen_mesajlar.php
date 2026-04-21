@@ -1,7 +1,7 @@
 <?php
 require_once 'baglan.php';
 
-// Tüm mesajları tarihe göre en yeniden en eskiye doğru çekiyoruz
+// Tüm mesajları tarihe göre en yeniden en eskiye doğru çekme
 $sorgu = $db->prepare("SELECT * FROM mesajlar ORDER BY tarih DESC");
 $sorgu->execute();
 $mesajlar = $sorgu->fetchAll(PDO::FETCH_ASSOC);
