@@ -303,9 +303,9 @@
       transform: translateY(-2px);
     }
     
-    /* Hakkımızda Özel Stilleri (About Section) */
+    /* About Section */
     #about {
-      background-color: var(--accent); /* Beyaz yazının okunması için eklendi */
+      background-color: var(--accent); /* Beyaz yazının okunması için */
     }
     #about .section-title,
     #about .about-text h2 {
@@ -313,7 +313,7 @@
     }
     #about .section-sub,
     #about .about-text p {
-      color: #ffffff; /* İstenen beyaz yazı rengi */
+      color: #ffffff; 
     }
     .about-wrap {
       display: grid;
@@ -671,12 +671,12 @@
         });
       });
 
-      // Mobilde (telefonda) hamburger menüyü açıp kapatma
+      // Mobilde hamburger menüyü açıp kapatma
       document.getElementById("menuToggle").addEventListener("click", function () {
         document.getElementById("navLinks").classList.toggle("open");
       });
 
-      // 2. SEPETE EKLEME İŞLEMİ (Arka Odaya Bağlantı)
+      // 2. SEPETE EKLEME İŞLEMİ
       document.querySelectorAll(".add-cart").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var name = btn.getAttribute("data-name"); 
@@ -706,7 +706,7 @@
         });
       });
 
-      // 3. İLETİŞİM FORMU (Mesajları Veritabanına Gönderme)
+      // 3. İLETİŞİM FORMU
       var iletisimFormu = document.getElementById("contactForm");
       if(iletisimFormu) {
           iletisimFormu.addEventListener("submit", function (e) {
