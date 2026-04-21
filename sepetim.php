@@ -28,7 +28,7 @@ $toplam_tutar = 0;
       --warm-brown: #8b7355;
       --deep-brown: #3d3429;
       --accent: #c9a87c;
-      --red: #a84632; /* Silme butonu için zarif bir kiremit kırmızısı */
+      --red: #a84632; 
       --card: rgba(255, 255, 255, 0.95);
       --shadow: 0 12px 40px rgba(45, 35, 28, 0.08);
       --radius: 20px;
