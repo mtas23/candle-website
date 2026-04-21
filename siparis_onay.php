@@ -4,10 +4,10 @@ require_once 'baglan.php';
 
 $session_id = session_id();
 
-// Sadece form doldurularak (POST işlemiyle) gelindiyse çalıştır
+// Sadece form doldurularak gelindiyse çalıştır
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     
-    // Formdan gelen adres bilgilerini alıyoruz
+    // Formdan gelen adres bilgilerini alma
     $ad_soyad = $_POST['ad_soyad'];
     $telefon = $_POST['telefon'];
     $adres = $_POST['adres'];
@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sorgu->execute([$session_id]);
     $sepet_urunleri = $sorgu->fetchAll(PDO::FETCH_ASSOC);
 
-    // Eğer sepette ürün varsa kaydetme işlemini yap (Sayfayı boş yenilerse tekrar kaydetmesin diye)
+    // Eğer sepette ürün varsa kaydetme işlemini yap
     if(count($sepet_urunleri) > 0) {
         $urun_listesi = "";
         $toplam_tutar = 0;
